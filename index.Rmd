@@ -19,7 +19,7 @@ tidy=TRUE, tidy.opts=list(width.cutoff=60), R.options=list(max.print=100))
 
 ## Data Wrangling, Exploration, Visualization
 
-### Sung Joon Roh, Sr52225
+### Sung Joon Roh, sr52225
 
 #### Introduction 
 

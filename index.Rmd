@@ -146,9 +146,7 @@ joined_dataset1 %>% group_by(Pos) %>% summarize(Count=n()) #%>% #gt() #%>%
 joined_dataset1 %>% group_by(Age) %>% summarize(Count=n()) #%>% #gt() #%>%
   #tab_header(title= "Player Counts for Each Age")
 joined_dataset1 %>% group_by(Tm) %>% summarize(Count=n()) #%>% #gt() #%>%
-  #tab_header(title= "Player Counts for Each Team")
 
-# your wrangling code
 ```
 
 I decided to focus on the variables PTS, Pts_per36min, Tm, Age, and FTA. First, with the mutate function, I generate a new variable called Pts_per36min, which is actually a well-known basketball statistic but I was surprised to not see it in neither datasets. I equated it to 36 divided by the amount of minutes they average, multiplied by the total amount of points they average. Afterwards, I round to the single decimal, as this is a common trend in the world of basketbal statistics. 

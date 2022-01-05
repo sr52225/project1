@@ -2051,9 +2051,6 @@ joined_dataset1 %&gt;% group_by(Tm) %&gt;% summarize(Count = n())  #%&gt;% #gt()
 ##  9 DET      16
 ## 10 GSW      15
 ## # … with 20 more rows</code></pre>
-<pre class="r"><code># tab_header(title= &#39;Player Counts for Each Team&#39;)
-
-# your wrangling code</code></pre>
 <p>I decided to focus on the variables PTS, Pts_per36min, Tm, Age, and FTA. First, with the mutate function, I generate a new variable called Pts_per36min, which is actually a well-known basketball statistic but I was surprised to not see it in neither datasets. I equated it to 36 divided by the amount of minutes they average, multiplied by the total amount of points they average. Afterwards, I round to the single decimal, as this is a common trend in the world of basketbal statistics.</p>
 <p>With the str_replace and regex, I replaced all characters that show up one time or more in the team column with their lowercase characters. As a result, all teams which originally showed up as all-caps city abbreviations, are now lowercase.</p>
 <p>Other cool features included using mutate() to create a new variable with an ifelse() statement that involved listing players and whether they were in their primes or not. I self-defined under 33 years of age as being in one’s athletic prime. What I enjoyed doing was creating the function to find a count of all unique observations. I grouped by two categorical variables to Team and Position, to find the count of all unique ages by position within the respective teams.</p>

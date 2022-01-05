@@ -1,5 +1,5 @@
 ---
-title: 'Project 1: Wrangling,a, Exploration'
+title: 'Project 1: Wrangling, Exploration'
 author: "SDS322E"
 date: ''
 output:

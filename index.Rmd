@@ -17,11 +17,11 @@ knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = 
 tidy=TRUE, tidy.opts=list(width.cutoff=60), R.options=list(max.print=100))
 ```
 
-## Data Wrangling, Exploration
+# Data Wrangling, Exploration
 
-### Sung Joon Roh, sr52225
+## Sung Joon Roh, sr52225
 
-#### Introduction 
+### Introduction 
 
 The two datasets I will be using are both NBA (National Basketball Associated) related, with one dataset providing the per-game stats for all players, and the other providing the "advanced" per-game stats for all players (data basketball geeks drool over). I have loved basketball ever since I could lay my hands on one, and have been following the NBA from the age of 4. I wanted to work with sports statistics as it is so prevalent in today's world of sports, and examine ways I can make for interesting pieces of data with the tools that we have learned throughout this semester. 
 

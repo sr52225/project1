@@ -1574,8 +1574,9 @@ head(dataset1)</code></pre>
 ## #   `WS/48` &lt;dbl&gt;, OBPM &lt;dbl&gt;, DBPM &lt;dbl&gt;, BPM &lt;dbl&gt;, VORP &lt;dbl&gt;</code></pre>
 <pre class="r"><code># read_csv() also takes in URLs readxl::read_excel() #
 # reading excel sheets</code></pre>
-<div id="tidying-reshaping" class="section level4">
-<h4>Tidying: Reshaping</h4>
+</div>
+<div id="tidying-reshaping" class="section level3">
+<h3>Tidying: Reshaping</h3>
 <p>If your datasets are tidy already, demonstrate that you can reshape data with pivot wider/longer here (e.g., untidy and then retidy). Alternatively, it may be easier to wait until the wrangling section so you can reshape your summary statistics. Note here if you are going to do this.</p>
 <pre class="r"><code># your tidying code (if applicable; can also wait until
 # wrangling section)
@@ -1588,8 +1589,8 @@ dataset2 &lt;- dataset2 %&gt;% group_by(Player) %&gt;% filter(!n() ==
 # with pivot wider/longer</code></pre>
 <p>Before any reshaping of data is done, I noticed that the dataset had duplicates of players. Specifically, if a player was either traded or released, then consequently signed by another team, their names would show up three times (three rows). One row would represent their total stats for the season so far, the next row would represent their stats with their original team, and the last row would represent their stats with their new team. Because it would be difficult to run a structured analysis having a team called “TOT” for “Total”, and how unrealistic it is, I decided to filter out these unlucky 8 players (number of players traded) from each dataset.</p>
 </div>
-<div id="joiningmerging" class="section level4">
-<h4>Joining/Merging</h4>
+<div id="joiningmerging" class="section level3">
+<h3>Joining/Merging</h3>
 <pre class="r"><code># your joining code
 
 # your joining code
@@ -1727,8 +1728,8 @@ dataset1 %&gt;% inner_join(dataset2, by = &quot;Player&quot;) %&gt;% summarize(n
 <p>Breaking down section 2, I ran the glimpse() functions for both datasets to find the total number of observations/rows for each. There are 473 rows, 29 columns and 13717 total observations in dataset1 (stats per game), while there are 473 rows, 26 columns and 12298 total observations in dataset2 (advanced stats per game).</p>
 <p>Section 3 finds the distinct Player IDs as Player is the primary ID, finds the count, and the number of rows the grab the exact number. For section 4, an anti-join is used to find IDs (Player) that appear in one dataset and not the other. Unsurprisingly, the value was zero for both attempts. Lastly, the inner_join() function was called to find the IDs that both datasets had in common, and nrow() was called at the end to grab the exact number. Unsurprisingly, the value came out to be all 473 players.</p>
 </div>
-<div id="wrangling" class="section level4">
-<h4>Wrangling</h4>
+<div id="wrangling" class="section level3">
+<h3>Wrangling</h3>
 <pre class="r"><code># your wrangling code Chosen variables: Player, PTS,
 # Pts_per36min, Tm, Age, FTA (Free Throw Attempts), PER
 
@@ -2066,7 +2067,6 @@ joined_dataset1 %&gt;% group_by(Tm) %&gt;% summarize(Count = n())  #%&gt;% #gt()
 <p>With the str_replace and regex, I replaced all characters that show up one time or more in the team column with their lowercase characters. As a result, all teams which originally showed up as all-caps city abbreviations, are now lowercase.</p>
 <p>Other cool features included using mutate() to create a new variable with an ifelse() statement that involved listing players and whether they were in their primes or not. I self-defined under 33 years of age as being in one’s athletic prime. What I enjoyed doing was creating the function to find a count of all unique observations. I grouped by two categorical variables to Team and Position, to find the count of all unique ages by position within the respective teams.</p>
 <p>All other lines of code involved finding summary statistics like mean, sd, sum, min, max, and sorting them by descending or ascending to find the highest or lowest ranked players.</p>
-</div>
 </div>
 </div>
 </div>

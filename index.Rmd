@@ -42,7 +42,7 @@ head(dataset2)
 
 ```
 
-#### Tidying: Reshaping
+### Tidying: Reshaping
 
 If your datasets are tidy already, demonstrate that you can reshape data with pivot wider/longer here (e.g., untidy and then retidy). Alternatively, it may be easier to wait until the wrangling section so you can reshape your summary statistics. Note here if you are going to do this.
 
@@ -56,7 +56,7 @@ dataset2 <- dataset2 %>% group_by(Player) %>% filter(!n()==3)
 ```
 Before any reshaping of data is done, I noticed that the dataset had duplicates of players. Specifically, if a player was either traded or released, then consequently signed by another team, their names would show up three times (three rows). One row would represent their total stats for the season so far, the next row would represent their stats with their original team, and the last row would represent their stats with their new team. Because it would be difficult to run a structured analysis having a team called "TOT" for "Total", and how unrealistic it is, I decided to filter out these unlucky 8 players (number of players traded) from each dataset. 
     
-#### Joining/Merging
+### Joining/Merging
 
 ```{R}
 # your joining code
@@ -92,7 +92,7 @@ Breaking down section 2, I ran the glimpse() functions for both datasets to find
 
 Section 3 finds the distinct Player IDs as Player is the primary ID, finds the count, and the number of rows the grab the exact number. For section 4, an anti-join is used to find IDs (Player) that appear in one dataset and not the other. Unsurprisingly, the value was zero for both attempts. Lastly, the inner_join() function was called to find the IDs that both datasets had in common, and nrow() was called at the end to grab the exact number. Unsurprisingly, the value came out to be all 473 players. 
 
-####  Wrangling
+###  Wrangling
 
 ```{R}
 # your wrangling code  
